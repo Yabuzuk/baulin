@@ -29,7 +29,7 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 40px 20px;
+    padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
 
@@ -39,7 +39,7 @@ header nav ul li a:hover {
 }
 
 main {
-    padding: 20px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -52,7 +52,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    font-size: 12px; /* Уменьшаем размер шрифта */
     position: fixed;
     width: 100%;
     bottom: 0;
