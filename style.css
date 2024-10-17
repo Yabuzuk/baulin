@@ -52,7 +52,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    font-size: 12px; /* Уменьшаем размер шрифта */
     position: fixed;
     width: 100%;
     bottom: 0;
