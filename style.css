@@ -51,11 +51,11 @@ footer {
     background-color: #006699;
     color: white;
     text-align: center;
-    padding: 40px 0;
+    padding: 5px 0;
+    font-size: 12px; /* Уменьшаем размер шрифта */
     position: fixed;
     width: 100%;
     bottom: 0;
-}
 
 button {
     background-color: #0088cc;
