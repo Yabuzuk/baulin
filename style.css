@@ -51,12 +51,27 @@ footer {
     background-color: #006699;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0;
+    font-size: 12px;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
+/* Стили для изображений */
+.image-block {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.image-block img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопка */
 button {
     background-color: #0088cc;
     color: white;
@@ -71,15 +86,78 @@ button:hover {
     background-color: #006699;
 }
 
-/* Стили для изображений */
-.image-block {
-    text-align: center;
-    margin: 30px 0;
+/* ---------- Медиа-запросы для адаптивности ---------- */
+
+/* Планшеты (ширина экрана от 768px до 1024px) */
+@media (max-width: 1024px) {
+    header nav ul {
+        flex-direction: column; /* Вертикальное меню на планшетах */
+    }
+
+    .image-block img {
+        max-width: 90%; /* Немного увеличиваем изображение для планшетов */
+    }
+
+    footer {
+        font-size: 14px; /* Чуть больше шрифт для планшетов */
+    }
 }
 
-.image-block img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Мобильные устройства (ширина экрана до 767px) */
+@media (max-width: 767px) {
+    header nav ul {
+        flex-direction: column; /* Вертикальное меню на мобильных */
+        margin: 10px 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Увеличиваем отступы между элементами меню */
+    }
+
+    header nav ul li a {
+        padding: 10px; /* Уменьшаем отступы у ссылок */
+        font-size: 14px; /* Меньший размер шрифта для ссылок */
+    }
+
+    h1 {
+        font-size: 24px; /* Уменьшаем размер заголовков на мобильных */
+    }
+
+    main {
+        padding: 20px 10px; /* Меньше отступов для мобильных */
+    }
+
+    .image-block img {
+        max-width: 100%; /* Изображения занимают всю ширину экрана */
+    }
+
+    button {
+        padding: 8px 16px; /* Уменьшаем размеры кнопок */
+        font-size: 14px; /* Меньший текст на кнопках */
+    }
+
+    footer {
+        font-size: 12px; /* Меньший размер шрифта в футере */
+        padding: 10px 0; /* Немного больше отступов для комфорта */
+    }
+}
+
+/* Очень маленькие устройства (ширина экрана до 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Еще меньше заголовки */
+    }
+
+    header nav ul li a {
+        font-size: 12px; /* Меньше текст в навигации */
+    }
+
+    button {
+        font-size: 12px; /* Еще меньше кнопки */
+        padding: 6px 12px;
+    }
+
+    footer {
+        font-size: 10px; /* Уменьшаем размер шрифта футера на малых экранах */
+    }
 }
