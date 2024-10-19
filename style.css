@@ -1,15 +1,22 @@
 /* Общие стили */
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%; /* Задаем высоту для всей страницы */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
+    flex-grow: 1;
 }
 
 header {
-    background-color: #0088cc; /* Основной цвет Telegram */
-    padding: 10px 0;
+    background-color: #0088cc;
+    padding: 15px 0;
     text-align: center;
 }
 
@@ -19,10 +26,11 @@ header nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 header nav ul li a {
@@ -39,8 +47,9 @@ header nav ul li a:hover {
 }
 
 main {
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
+    flex-grow: 1; /* Чтобы main занимал всё оставшееся пространство */
 }
 
 h1 {
@@ -51,10 +60,10 @@ footer {
     background-color: #006699;
     color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
     font-size: 12px;
-    position: fixed;
     width: 100%;
+    position: relative; /* Для нормального отображения при большом контенте */
     bottom: 0;
 }
 
@@ -65,7 +74,7 @@ footer {
 }
 
 .image-block img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -76,10 +85,11 @@ button {
     background-color: #0088cc;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
 button:hover {
@@ -88,76 +98,74 @@ button:hover {
 
 /* ---------- Медиа-запросы для адаптивности ---------- */
 
-/* Планшеты (ширина экрана от 768px до 1024px) */
 @media (max-width: 1024px) {
     header nav ul {
-        flex-direction: column; /* Вертикальное меню на планшетах */
+        flex-direction: column;
     }
 
     .image-block img {
-        max-width: 90%; /* Немного увеличиваем изображение для планшетов */
+        max-width: 90%;
     }
 
     footer {
-        font-size: 14px; /* Чуть больше шрифт для планшетов */
+        font-size: 14px;
     }
 }
 
-/* Мобильные устройства (ширина экрана до 767px) */
 @media (max-width: 767px) {
     header nav ul {
-        flex-direction: column; /* Вертикальное меню на мобильных */
+        flex-direction: column;
         margin: 10px 0;
     }
 
     header nav ul li {
-        margin: 10px 0; /* Увеличиваем отступы между элементами меню */
+        margin: 10px 0;
     }
 
     header nav ul li a {
-        padding: 10px; /* Уменьшаем отступы у ссылок */
-        font-size: 14px; /* Меньший размер шрифта для ссылок */
+        padding: 10px;
+        font-size: 14px;
     }
 
     h1 {
-        font-size: 24px; /* Уменьшаем размер заголовков на мобильных */
+        font-size: 24px;
     }
 
     main {
-        padding: 20px 10px; /* Меньше отступов для мобильных */
+        padding: 20px 10px;
     }
 
     .image-block img {
-        max-width: 100%; /* Изображения занимают всю ширину экрана */
+        max-width: 100%;
     }
 
     button {
-        padding: 8px 16px; /* Уменьшаем размеры кнопок */
-        font-size: 14px; /* Меньший текст на кнопках */
+        padding: 10px 20px;
+        font-size: 14px;
     }
 
     footer {
-        font-size: 12px; /* Меньший размер шрифта в футере */
-        padding: 10px 0; /* Немного больше отступов для комфорта */
+        font-size: 12px;
+        padding: 10px 0;
     }
 }
 
-/* Очень маленькие устройства (ширина экрана до 480px) */
 @media (max-width: 480px) {
     h1 {
-        font-size: 20px; /* Еще меньше заголовки */
+        font-size: 20px;
     }
 
     header nav ul li a {
-        font-size: 12px; /* Меньше текст в навигации */
+        font-size: 12px;
     }
 
     button {
-        font-size: 12px; /* Еще меньше кнопки */
-        padding: 6px 12px;
+        font-size: 12px;
+        padding: 8px 15px;
     }
 
     footer {
-        font-size: 10px; /* Уменьшаем размер шрифта футера на малых экранах */
+        font-size: 10px;
+        padding: 8px 0;
     }
 }
