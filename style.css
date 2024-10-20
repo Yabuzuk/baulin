@@ -25,11 +25,42 @@ body.show-nav {
 }
 
 /* Навигационная панель */
+header {
+    background-color: #006699;
+    padding: 20.5px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #006699;
+    border-radius: 5px;
+}
 nav {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #0088cc;
+    background-color: #006699;
     width: 200px; /* Ширина панели навигации */
     height: 100%;
     z-index: 100;
@@ -83,7 +114,7 @@ nav ul li a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 200px; /* Кнопка имеет такую же ширину, как и навигационная панель */
+    width: 35px; /* Кнопка имеет такую же ширину, как и навигационная панель */
     background-color: #006699;
     border: none;
     font-size: 16px;
