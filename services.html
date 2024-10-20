@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Основные стили для кнопок */
+        .buttons-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #006699;
+        }
+
+        .text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .text {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+                width: 100%;
+            }
+
+            .text {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+			<button class="toggle" id="toggle">
+            <i class="fa fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <div class="logo">
+                <img src="https://randomuser.me/api/portraits/women/74.jpg" alt="user" />
+            </div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="team.html">Наша команда</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Наши услуги</h1>
+        <p>Мы предлагаем широкий спектр услуг: разработка сайтов, SEO-оптимизация, техническая поддержка и многое другое.</p>
+   
+        <!-- Блок с картинкой -->
+        <div class="image-block">
+            <img src="images/i.jpg" alt="Создание сайтов">
+        </div>
+
+        <!-- Контейнер с кнопками -->
+        <div class="buttons-container">
+            <div>
+                <button class="btn">Сделать сайт</button>
+                <div class="text">Цена от 7000 до 15000</div>
+            </div>
+            <div>
+                <button class="btn">Исправить ошибки сайта</button>
+                <div class="text">Цена от 4000 до 9000</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Создание сайтов. Все права защищены.</p>
+    </footer>
+	
+	<script src="script.js"></script>
+</body>
+</html>
